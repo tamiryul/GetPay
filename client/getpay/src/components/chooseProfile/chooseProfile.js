@@ -1,4 +1,3 @@
-///// קומפוננטה לבחירת לקוח מתוך מסד הנתונים
 import React from "react";
 import {Consumer} from './../Context/index'
 
