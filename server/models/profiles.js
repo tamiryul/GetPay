@@ -1,4 +1,3 @@
-///// מגדיר איך נראית הטבלה במסד הנתונים
 module.exports = (sequelize, Sequelize) => {
     const Profiles = sequelize.define("profiles", {
         profileid: {
