@@ -1,4 +1,3 @@
-///// קומפוננטה של איחוד כלל החובות
 import React from 'react';
 import './totaldebts.css'
 
