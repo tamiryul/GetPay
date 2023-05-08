@@ -1,4 +1,3 @@
-///// אחראי לעמוד פרופיל ומייצא נתונים שב-INPUTS
 import React, {Component} from 'react';
 import './profile.css'
 import {Consumer} from '../Context'
