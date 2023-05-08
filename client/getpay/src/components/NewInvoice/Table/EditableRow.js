@@ -1,4 +1,3 @@
-///// מגדיר את מבנה הטבלה
 import React from 'react';
 import './editablerow.css'
 
