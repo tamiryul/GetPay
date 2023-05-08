@@ -1,4 +1,3 @@
-///// קומפוננטה שעושה מאפ לחובות ומכיל רשימת חובות מהמסד נתונים
 import React, { useState } from 'react';
 import Invoice from '../Invoice/Invoice.js';
 import InvoiceCounter from './../InvoiceCounter/InvoiceCounter.js';
