@@ -1,4 +1,3 @@
-///// אחראי לטבלה, שואבת נתונים ומייצאת אותם
 import React, { useState, Fragment } from "react";
 import './table.css'
 import data from './../../../data.json';
