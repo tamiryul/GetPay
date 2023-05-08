@@ -1,0 +1,41 @@
+/* .image {
+    width: 100px;
+    height: 100px;
+    border: 1px solid green;
+    background: url('./../../assets/images/osem.png');
+    background-size: contain;
+} */
+
+.line{
+    border: 1px solid silver;
+    margin: 10px 5px 5px 5px;
+    background-color: silver;
+}
+
+.clients {
+    border: 1px dashed silver;
+}
+
+div.gap {
+    height: 40px;
+}
+
+.TotalInvoice {
+    margin: 10px;
+    font-size: 30px;
+}
+
+#debt {
+    font-size: 12px;
+    background-color: rgba(12, 211, 247, 0.185);
+}
+
+#Save {
+    font-size: 20px;
+}
+
+#supplier {
+    position: relative;
+    top: 20px;
+    right: 2px;
+}

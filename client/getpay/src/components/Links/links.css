@@ -1,0 +1,21 @@
+li{
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    margin: 5px 35px;
+    align-items: center;
+    text-align: center;
+    
+}
+
+div.main-link {
+    height: 30px;
+    margin: -35px 0 0 0 ;
+    background-color: rgb(36, 35, 18);
+}
+
+a
+{
+    color:rgb(8, 206, 241);
+}

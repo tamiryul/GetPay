@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Aladin';
+  src: url(./../src/fonts/Aladin.ttf)format('woff');
+}
+
+@font-face {
+  font-family: 'BerkshireSwash-Regular';
+  src: url(./../src/fonts/BerkshireSwash-Regular.ttf)format('woff');
+}
+
+@font-face {
+  font-family: 'csnpwdtNFI';
+  src: url(./../src/fonts/csnpwdtNFI.otf)format('woff');
+}
+
+@font-face {
+  font-family: 'csnpwdt-NFI';
+  src: url(./../src/fonts/csnpwdt-NFI.ttf)format('woff');
+}
+
+@font-face {
+  font-family: 'IMFellEnglishSC';
+  src: url(./../src/fonts/IMFellEnglishSC.ttf)format('woff');
+}
+
+@font-face {
+  font-family: 'RubikBeastly';
+  src: url(./../src/fonts/RubikBeastly.ttf)format('woff');
+}
+
+@font-face {
+  font-family: 'youmurdererbb_reg';
+  src: url(./../src/fonts/youmurdererbb_reg.ttf)format('woff');
+}

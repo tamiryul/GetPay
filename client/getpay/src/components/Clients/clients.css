@@ -1,0 +1,22 @@
+.Choose {
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+select {
+    color: black;
+    border: 2px dashed rgb(8, 206, 241);
+    font-family: 'Aladin';
+    border-radius: 4px;
+    position: relative;
+    left: 140px;
+    bottom: 22px;
+}
+
+.Submit {
+    display: inline-block;
+    position: relative;
+    margin-left: 150px;
+    font-size: 15px;
+    
+}
