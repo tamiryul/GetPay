@@ -1,4 +1,3 @@
-///// מגדיר את הלקוחות ואת כפתור הבחירה בעמוד NEW INVOICE
 import React, {Component } from 'react';
 import './clients.css'
 import {Consumer} from './../Context/index'
