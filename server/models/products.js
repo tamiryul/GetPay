@@ -1,4 +1,3 @@
-///// מגדיר איך נראית הטבלה במסד הנתונים
 module.exports = (sequelize, Sequelize) => {
     const Products = sequelize.define("products", {
         productid: {
