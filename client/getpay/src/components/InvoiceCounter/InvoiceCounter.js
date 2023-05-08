@@ -1,4 +1,3 @@
-///// סופר את מספר החובות, בעמוד הראשי
 import React from "react";
 import './invoicecounter.css'
 
