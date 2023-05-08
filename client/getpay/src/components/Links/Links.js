@@ -1,4 +1,3 @@
-///// מגדיר הפניות ללינקים בראש העמוד
 import React from "react";
 import {NavLink} from 'react-router-dom';
 import './links.css'
