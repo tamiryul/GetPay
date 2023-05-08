@@ -1,4 +1,3 @@
-///// כותרת ראשית של האפליקציה
 import React from "react";
 import './header.css'
 
