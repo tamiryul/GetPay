@@ -1,4 +1,3 @@
-///// קומפוננטה שעושה מאפ למסד הנתונים
 import React from "react";
 import {Consumer} from './../Context/index'
 import './productslist.css'
