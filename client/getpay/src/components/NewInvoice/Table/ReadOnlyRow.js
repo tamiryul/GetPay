@@ -1,4 +1,3 @@
-///// מכיל את כפתורי השינוי והביטול מהטבלה
 import React from 'react';
 import './readonlyrow.css'
 
