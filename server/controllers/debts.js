@@ -1,12 +1,10 @@
 ///// c.r.u.d- create, read, update, delete
 
-//// נצרוך את המודל
 const db = require('../models');
-const Debt = db.debts ///// התממשקות עם הטבלה
+const Debt = db.debts 
 const Op = db.Sequelize.Op
 const sequelize = require("sequelize");
 
-///// יצירה חדשה
 exports.create = (req, res) => {
     const debt = {
         debtid: req.body.debtsid,
@@ -18,7 +16,6 @@ exports.create = (req, res) => {
         debtnumber : req.body.debtnumber
     }
 
-    ///// נבצע שמירה
     Debt.create(debt)
     .then(data => res.send(data))
     .catch(err => res.status(500).send({
@@ -26,7 +23,6 @@ exports.create = (req, res) => {
     }))
 }
 
-///// אחזור
 exports.findAll = (req, res) => {
     // const totalDebts = `select profiles.profilename, debts.debtnumber ,
     //                 sum(debts.finalprice) as totalDebt from debts
@@ -40,7 +36,6 @@ exports.findAll = (req, res) => {
     .catch(err => res.status(500).send({message: err.message || "some error occurred while retrieving all Debts "}))
 }
 
-///// חיפוש יחיד לפי ID
 exports.findOne = (req, res) => {
     const id = req.params.id; ///// URL segments that are used to capture the values specified at their position in the URL
     Debt.findOne(id)
@@ -53,11 +48,9 @@ exports.findOne = (req, res) => {
     .catch(err => res.status(500).send({message:`Error retrieving Debt with id=${id}`}))
 };
 
-///// לעדכן לפי ID
 exports.update = (req, res) => {
     const id = req.params.id;
         Debt.update(req.body, { where: { id: id}})
-        ///// חפש את הנתון, במידה והמספר תואם לחיפוש תוציא הודעה, במידה ולא תוציא הודעת שגיאה
         .then( num => {
             if(num == 1)
                 res.send({message: "Debt was updated successfully."})
@@ -67,7 +60,6 @@ exports.update = (req, res) => {
         .catch(err => res.status(500).send({message:`Error updating Debt with id=${id}`})) 
 };
 
-///// מחיקה
 exports.delete = (req, res) => {
     const id = req.params.id;
     Debt.destroy({ where: { id: id }})
@@ -80,7 +72,6 @@ exports.delete = (req, res) => {
     .catch(err => res.status(500).send({message:`Could not delete Debt with id=${id}`})) 
 };
 
-///// מחיקת כל הנתונים
 exports.deleteAll = (req, res) => {
     Debt.destroy({ where: {},
         truncate: false ///// tell the output sink to display the full column
@@ -90,7 +81,6 @@ exports.deleteAll = (req, res) => {
     })) 
 };
 
-///// חיפוש כל הפרופילים שפורסמו
 exports.findAllPublished = (req, res) => {
     Debt.findAll({where:{published:true}})
     .then(data => res.send(data))
