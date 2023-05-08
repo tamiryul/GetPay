@@ -1,4 +1,3 @@
-///// מגדיר את החיבור למסדי הנתונים ומכיל את הפרוויידר שהם פעולות ה-GET+ ADD
 import React,{Component} from 'react';
 import axios from 'axios';
 
@@ -55,7 +54,7 @@ export class Provider extends Component {
    
 /////append - a process that involves adding new data elements to an existing database
     addProfile = profile => {
-        const payload = new URLSearchParams();/////בונה אובייקט שאני רוצה לשלוח כמו טופס
+        const payload = new URLSearchParams();
         payload.append('profilename', profile.profilename)
         payload.append('contactname', profile.contactname)
         payload.append('email', profile.email)
