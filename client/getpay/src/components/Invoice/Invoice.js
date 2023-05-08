@@ -1,4 +1,3 @@
-///// מגדיר איך בנוי חוב ואת כפתורי המחיקה
 import React from 'react';
 import './invoice.css'
 
