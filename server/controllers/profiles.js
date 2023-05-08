@@ -1,11 +1,9 @@
 ///// c.r.u.d- create, read, update, delete
 
-//// נצרוך את המודל
 const db = require('../models');
-const Profile = db.profiles ///// התממשקות עם הטבלה
+const Profile = db.profiles 
 const Op = db.Sequelize.Op
 
-///// יצירה חדשה
 exports.create = (req, res) => {
     const profile = {
         profileid: req.body.profileid,
@@ -17,7 +15,6 @@ exports.create = (req, res) => {
     }
 
     // res.send(profile)\
-    /// נבצע שמירה
     Profile.create(profile)
     .then(body => res.send(body))
     .catch(err => res.status(500).send({
@@ -25,14 +22,12 @@ exports.create = (req, res) => {
     }))
 };
 
-///// אחזור
 exports.findAll = (req, res) => {
     Profile.findAll()
     .then(data => res.send(data))
     .catch(err => res.status(500).send({message: err.message || "some error occurred while retrieving all profiles "}))
 };
 
-///// חיפוש יחיד לפי ID
 exports.findOne = (req, res) => {
     const id = req.params.id; ///// URL segments that are used to capture the values specified at their position in the URL
     Profile.findOne(id)
@@ -45,11 +40,9 @@ exports.findOne = (req, res) => {
     .catch(err => res.status(500).send({message:`Error retrieving Profile with id=${id}`}))
 };
 
-///// לעדכן לפי ID
 exports.update = (req, res) => {
     const id = req.params.id;
         Profile.update(req.body, { where: { id: id}})
-        ///// חפש את הנתון, במידה והמספר תואם לחיפוש תוציא הודעה, במידה ולא תוציא הודעת שגיאה
         .then( num => {
             if(num == 1)
                 res.send({message: "Profile was updated successfully."})
@@ -59,7 +52,6 @@ exports.update = (req, res) => {
         .catch(err => res.status(500).send({message:`Error updating Profile with id=${id}`})) 
 };
 
-///// מחיקה
 exports.delete = (req, res) => {
     const id = req.params.id;
     Profile.destroy({ where: { id: id }})
@@ -72,7 +64,6 @@ exports.delete = (req, res) => {
     .catch(err => res.status(500).send({message:`Could not delete Profile with id=${id}`})) 
 };
 
-///// מחיקת כל הנתונים
 exports.deleteAll = (req, res) => {
     Profile.destroy({ where: {},
         truncate: false ///// tell the output sink to display the full column
@@ -82,7 +73,6 @@ exports.deleteAll = (req, res) => {
 })) 
 };
 
-///// חיפוש כל הפרופילים שפורסמו
 exports.findAllPublished = (req, res) => {
     Profile.findAll({where:{published:true}})
     .then(data => res.send(data))
