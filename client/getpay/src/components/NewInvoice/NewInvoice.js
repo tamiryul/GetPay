@@ -1,4 +1,3 @@
-///// אחראי לעמוד NEW INVOICE
 import React, {Component } from 'react';
 import './newinvoice.css';
 import Table from './Table/Table.js';
